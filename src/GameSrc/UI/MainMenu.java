@@ -1,4 +1,6 @@
-package GameSrc;
+package GameSrc.UI;
+
+import GameSrc.Game2048;
 
 import javax.swing.*;
 import java.awt.*;

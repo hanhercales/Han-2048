@@ -1,4 +1,4 @@
-package GameSrc;
+package GameSrc.UI;
 
 import javax.swing.*;
 import java.awt.*;

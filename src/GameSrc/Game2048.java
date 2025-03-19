@@ -1,5 +1,9 @@
 package GameSrc;
 
+import GameSrc.Board.Board;
+import GameSrc.Board.BoardMover;
+import GameSrc.UI.GameUI;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -14,7 +18,11 @@ public class Game2048 extends JFrame implements KeyListener {
         board = new Board();
         boardMover = new BoardMover(board.getBoard(), Board.getSIZE());
         gameUI = new GameUI();
-
+        
+        board.addRandomTile();
+        board.addRandomTile();
+        gameUI.updateUI(board.getBoard());
+        
         initializeFrame();
     }
 
@@ -78,7 +86,7 @@ public class Game2048 extends JFrame implements KeyListener {
             board.addRandomTile(); // Thêm ô mới sau khi di chuyển
             gameUI.updateUI(board.getBoard());
         } else {
-            board.undoMove(); // Khôi phục trạng thái nếu không có di chuyển
+            board.undoMove();
         }
     }
 

@@ -1,8 +1,8 @@
-package GameSrc;
+package GameSrc.Board;
 
 public class Board {
     private static final int SIZE = 4;
-    private int[][] board;
+    private final int[][] board;
     private int[][] previousState;
 
     public Board() {

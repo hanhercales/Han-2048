@@ -1,4 +1,4 @@
-package GameSrc;
+package GameSrc.Board;
 
 public class BoardMover {
     private int[][] board;
